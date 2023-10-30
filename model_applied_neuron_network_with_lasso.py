@@ -1,4 +1,4 @@
-# Assuming X is your matrix of gene expressions (or SNPs) and y is the ICBT treatment score:
+# Assuming X is the matrix of gene expressions (or SNPs) and y is the ICBT treatment score:
 model = Lasso(lam=1.0, lr=1.0, logistic=False)
 model.fit(X, y)
 
