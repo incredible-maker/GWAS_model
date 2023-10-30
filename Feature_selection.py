@@ -1,6 +1,5 @@
 import subprocess
 
-# 调用ANNOVAR
 def run_annovar(input_file, output_file, annovar_dir, build_ver="hg19"):
     annotate_variation = annovar_dir + "/annotate_variation.pl"
     command = [
@@ -12,7 +11,6 @@ def run_annovar(input_file, output_file, annovar_dir, build_ver="hg19"):
     ]
     subprocess.run(command)
 
-# 使用您的文件和ANNOVAR目录调用此函数
 run_annovar("your_input_file.txt", "your_output_file", "/path/to/annovar")
 
 
@@ -58,8 +56,7 @@ class CombinedNN(nn.Module):
         x = self.sigmoid(x)
         return x
 
-# For your data:
-# Assuming `genes_data` is your matrix of genetic data and `clinical_data` is the matrix of clinical features
+# Assuming `genes_data` is the matrix of genetic data and `clinical_data` is the matrix of clinical features
 weighted_genes = genes_data * 0.5
 clinical_data[:, 0] *= 0.1  # Assuming 0th column is "weight gain"
 clinical_data[:, 1] *= 0.1  # Assuming 1st column is "loss of interest"
