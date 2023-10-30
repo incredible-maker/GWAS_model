@@ -243,8 +243,7 @@ class LinearMixedModel:
 # Initialize the LMM model
 lmm = LinearMixedModel()
 
-# Assuming you've fit the model using:
-# lmm.fit(X_train, K, Kva, Kve, y_train)
+lmm.fit(X_train, K, Kva, Kve, y_train)
 
 # Predict
 # snp_data: This should be your SNP data for which you want to predict ICBT
