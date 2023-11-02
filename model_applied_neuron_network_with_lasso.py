@@ -24,21 +24,6 @@ val_length = len(dataset) - train_length
 train_dataset, val_dataset = random_split(dataset, [train_length, val_length])
 
 
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import DataLoader, TensorDataset, random_split
-
-# Convert data to TensorDataset
-dataset = TensorDataset(torch.from_numpy(X_selected).float(), torch.from_numpy(y).float().view(-1, 1))
-
-# Compute lengths of splits
-train_length = int(0.8 * len(dataset))
-val_length = len(dataset) - train_length
-
-# Randomly split dataset
-train_dataset, val_dataset = random_split(dataset, [train_length, val_length])
-
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 
