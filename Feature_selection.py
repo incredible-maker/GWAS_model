@@ -30,7 +30,7 @@ def get_pathways_for_genes(gene_list):
                 pathways.append(item['displayName'])
     return set(pathways)
 
-genes = ["LRFN5", ...]  # 你的基因列表
+genes = ["LRFN5", ...] 
 pathways = get_pathways_for_genes(genes)
 print(pathways)
 
